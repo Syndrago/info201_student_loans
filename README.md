@@ -1,8 +1,10 @@
 # Final Project
 Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
+---
+## Domain of Interest:
 
-
-
+We are interested in looking at student loan data and projects because this domain is something that members in our group can all relate to and we are interested in seeing the demographics of student loan data. 
+---
 
 ---
 ## dl-dashboard-ay2020-2021-q1 Info:
