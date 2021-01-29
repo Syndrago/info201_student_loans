@@ -4,7 +4,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 
 
-
+---
 ## dl-dashboard-ay2020-2021-q1 Info:
 
 **Where did you download the data (e.g., a web URL)?**
@@ -27,7 +27,7 @@ The data was collected by the government. The data is about TitleIV student aid.
 - Where (from what colleges) are people getting federal student loans? (who/where).
 - How much in federal student loans go to which colleges? (how much).
 - What level of college student is getting the most federal student loans (who).
-
+---
 
 ## Tabn331.20.xls Info:
 
