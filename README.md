@@ -20,10 +20,10 @@ The data was collected by the government. The data is about TitleIV student aid.
 
 **How many features (columns) are in the data?**
 
-30 (although many of them are repeats for other larger collumns)
+30 (although many of them are repeats for other larger columns)
 
 **What questions (from above) can be answered using the data in this dataset?**
-- Where (from what colleges) are people getting federal studet loans? (who/where)
+- Where (from what colleges) are people getting federal student loans? (who/where)
 - How much in federal student loans go to which colleges? (how much)
 - What level of college student is getting the most federal student loans (who)
 
