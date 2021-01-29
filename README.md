@@ -11,7 +11,7 @@ We are interested in looking at student loan data and projects because this doma
 - https://www.nerdwallet.com/article/loans/student-loans/student-loan-debt
 
 ## Data Driven Questions:
-- Who is taking out student loans (based on location, economic status, age, gender, etc.)
+- Who is taking out student loans (based on location, economic status, age, gender, etc.)?
 - What are the quantities involved (average loan amount, total loans taken out)?
 - Can Biden really forgive all or even part of the Federal Student Loan?
 
