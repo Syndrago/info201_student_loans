@@ -5,7 +5,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 
 
-##dl-dashboard-ay2020-2021-q1 Info:##
+## dl-dashboard-ay2020-2021-q1 Info:
 
 **Where did you download the data (e.g., a web URL)?**
 
