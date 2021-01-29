@@ -55,10 +55,12 @@ https://collegescorecard.ed.gov/
 The US Department of Education collects those data from the government API. And the data is about Institutional level data(cost, student body, financial aid, ect...).
 
 **How many observations (rows) are in your data?**
-Around 260,000.
+
+Around 260,000 observations.
 
 **How many features (columns) are in the data?**
-Around 90.
+
+Around 90 features.
 
 **What questions (from above) can be answered using the data in this dataset?**
 -What are the quantities involved?
