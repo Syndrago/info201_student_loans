@@ -3,7 +3,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 ## Domain of Interest:
 
-We are interested in looking at student loan data and projects because this domain is something that members in our group can all relate to and we are interested in seeing the demographics of student loan data. 
+We are interested in looking at student loan data and projects because this domain is something that members in our group can all relate to and we are interested in seeing the demographics of student loan data. There's also been some discussion around the Biden Administration forgiving student loan debt, so it will be interesting to see if this is feesible, and how many people would be effected.
 
 ## Data Driven Project Examples:
 - https://ticas.org/interactive-map/
