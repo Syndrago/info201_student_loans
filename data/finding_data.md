@@ -43,3 +43,19 @@ The data set was collected by the National Center for Education Statistics (NCES
 **What questions (from above) can be answered using the data in this dataset?**
 - Who is taking out student loans? (Through the type of higher level institution they are attending) 
 - What are the quantities involved? (Type of aid and amounts dispersed) 
+
+## SchoolScorecard.xls Info:
+
+**Where did you download the data?**
+
+https://collegescorecard.ed.gov/
+
+**How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
+
+The US Department of Education collects those data from the government API. And the data is about Institutional level data(cost, student body, financial aid, ect...).
+
+**How many observations (rows) are in your data?**
+Around 260,000.
+
+**How many features (columns) are in the data?**
+Around 90.
