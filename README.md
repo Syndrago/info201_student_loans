@@ -10,6 +10,11 @@ We are interested in looking at student loan data and projects because this doma
 - https://www.peoplespolicyproject.org/2020/11/16/what-is-the-current-student-debt-situation/
 - https://www.nerdwallet.com/article/loans/student-loans/student-loan-debt
 
+## Data Driven Questions:
+- Who is taking out student loans (based on location, economic status, age, gender, etc.)
+- What are the quantities involved (average loan amount, total loans taken out)?
+- Can Biden really forgive all or even part of the Federal Student Loan?
+
 ## dl-dashboard-ay2020-2021-q1 Info:
 
 **Where did you download the data (e.g., a web URL)?**
@@ -32,7 +37,6 @@ The data was collected by the government. The data is about TitleIV student aid.
 - Where (from what colleges) are people getting federal student loans? (who/where).
 - How much in federal student loans go to which colleges? (how much).
 - What level of college student is getting the most federal student loans (who).
----
 
 ## Tabn331.20.xls Info:
 
