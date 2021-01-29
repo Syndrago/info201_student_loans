@@ -59,3 +59,7 @@ Around 260,000.
 
 **How many features (columns) are in the data?**
 Around 90.
+
+**What questions (from above) can be answered using the data in this dataset?**
+-What are the quantities involved?
+-Who is taking out student loans
