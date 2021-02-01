@@ -15,4 +15,3 @@ We are interested in looking at student loan data and projects because this doma
 - What are the quantities involved (average loan amount, total loans taken out)?
 - Can Biden really forgive all or even part of the Federal Student Loan?
 
-
