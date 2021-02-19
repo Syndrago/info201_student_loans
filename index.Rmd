@@ -1,6 +1,29 @@
 ---
-title: "index"
+title: "Exploratory Analysis"
 output: html_document
 ---
+## Intro
 
+Our domain of interest is student loans. Specifically, we are looking at a dataset on Title IV Federal student loans. The dataset comes from the government and lists every university that received federal student loans, as well as numeric information on amount given and how many people received loans.The datasey we have is only for quarter 1 of 2020, although there are similar datasets available for many years in the past.
+
+## Summary Info
+
+```{r setup, echo = F, message = F}
+source("summary.R")
+source("scatter_plot.R")
+library(tidyverse)
+```
+
+In our dataset, we found that the university with the highest amount of subsidized loan recipients is `r summary_info$highest_recipient_name`. The average amount of subsidized recipients across all colleges is `r summary_info$average_recipients`. The total amount of colleges represented in the dataset is `r summary_info$num_colleges`. We also found that the average amount of money going to each college in subsidized loans is `r summary_info$average_amount` and that the highest amount given out to one college is `r summary_info$highest_amount`.
+
+## Table
+
+
+## Chart 1
+
+## Chart 2 - Recipients VS Amount Scatterplot
+What we were interested in seeing with this chart was whether or not there was a relationship between how much money a college receives in loans, and how many recipients they have. What we found was that there is a strong linear relationship between the two variables. This is what we expected for the most part, as it makes sense that the more recipients, the more money. However, there are a few colleges that appear to deviate slightly from the norm, receiving less money for the amount of recipients than other colleges. It would be interesting to use something like plotly to create an interactive version and more closely examine these deviant cases.
+```{r, echo = F, message = F, warning = F}
+scatter_plot
+```
 

@@ -3,7 +3,7 @@ library(tidyverse)
 dash <- read.csv(file = "data/dashboard_data.csv")
 
 
-ggplot(data = dash) +
+scatter_plot <- ggplot(data = dash) +
   geom_point(mapping = aes(x = Subsidized.Recipients, y = Subsidized.Dollars.of.Disbursements),
   alpha = 0.3,
   size = 3,
