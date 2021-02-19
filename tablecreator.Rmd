@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r echo = F}
 library(knitr)
 library(tidyverse)
-source("C:/Syndrago/UW/Year 3/Quarter 2/INFO 201/info201_student_loans/data/tablecreator.R")
+source("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/tablecreator.R?token=ASLHHB2B6DUYXRKJYEAHNILAHGD6K")
 ```
 
 ## Table of Subsidized Disimbursement Ratio for Schools with the Highest Ratio in Each State
@@ -20,5 +20,3 @@ Pretty significant since we want to know the ratio of the highest
 ```{r echo = F}
 kable(tabledata, col.names = gsub("[.]", " ", names(tabledata)))
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
