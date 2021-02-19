@@ -6,5 +6,4 @@ subsidized_state_most_average_disimbursement <- dashboard %>%
   group_by(State) %>%
   filter(Subsidized.Disimbursement.Ratio == max(Subsidized.Disimbursement.Ratio, na.rm = T))
 tabledata <- subsidized_state_most_average_disimbursement %>% 
-  select(School, State, Subsidized.Disimbursement.Ratio) %>% 
-  arrange(State)
+  select(School, State, Subsidized.Disimbursement.Ratio)
