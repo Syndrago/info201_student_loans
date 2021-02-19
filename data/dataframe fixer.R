@@ -1,5 +1,5 @@
 library(tidyverse)
-dashboard <- read.csv("C:/Syndrago/UW/Year 3/Quarter 2/INFO 201/info201_student_loans/data/dashboardusableish.csv", stringsAsFactors=FALSE)
+dashboard <- read.csv("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/data/dashboard_data.csv?token=ASLHHB64KZVPJUY24UJVZK3AHB3IO")
 comma_remover <- function(chartable){
   fixedtable <- as.numeric(gsub(",", "", chartable, fixed = TRUE))
   return(fixedtable)
