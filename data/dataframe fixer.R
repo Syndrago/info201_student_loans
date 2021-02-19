@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 library(tidyverse)
-dashboard <- read.csv("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/data/dashboard_data.csv?token=ASLHHB64KZVPJUY24UJVZK3AHB3IO")
+dashboard <- read.csv("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/data/dashboardusableish.csv?token=ASLHHB4I3SR2QBNSEQJHS53AHB4G2",stringsAsFactors = FALSE)
 comma_remover <- function(chartable){
   fixedtable <- as.numeric(gsub(",", "", chartable, fixed = TRUE))
   return(fixedtable)
@@ -83,5 +82,4 @@ dashboard$Grad.Plus.Dollars.of.Loans.Originated <- dollar_comma_remover(dashboar
 dashboard$Grad.Plus.Num.of.Disbursements <- comma_remover(dashboard$Grad.Plus.Num.of.Disbursements)
 dashboard$Grad.Plus.Dollars.of.Disbursements <- dollar_comma_remover(dashboard$Grad.Plus.Dollars.of.Disbursements)
 
-write.csv(dashboard,"C:/Syndrago/UW/Year 3/Quarter 2/INFO 201/info201_student_loans\\dashboard_data.csv", row.names = TRUE)
->>>>>>> 1e7e6cd6d658779d649c43df00d9c40eb6864cb8
+write.csv(dashboard,"C:/Syndrago/UW/Year 3/Quarter 2/INFO 201/info201_student_loans/data\\dashboard_data.csv", row.names = TRUE)
