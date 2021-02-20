@@ -34,15 +34,16 @@ We looked at all the student loans that subsidised in both the national level an
 ```{r, echo = F, message = F, warning = F}
 p
 ```
+
 ## Chart 2 - Recipients VS Amount Scatterplot
 What we were interested in seeing with this chart was whether or not there was a relationship between how much money a college receives in loans, and how many recipients they have. What we found was that there is a strong linear relationship between the two variables. This is what we expected for the most part, as it makes sense that the more recipients, the more money. However, there are a few colleges that appear to deviate slightly from the norm, receiving less money for the amount of recipients than other colleges. It would be interesting to use something like plotly to create an interactive version and more closely examine these deviant cases.
 ```{r, echo = F, message = F, warning = F}
 scatter_plot
 ```
 
+## Chart 3 Recipients numbers Vs School type
+we looked at the number of recipients for diffent types of school. We ignored outlairs in our graph to make it more clean and readable. Two main school types are private and public. Public has lower mean than private. Other school types neither don't have enough data nor is not eligible for student loan.
 
-
-
-
-
-
+```{r, echo = F, message = F, warning = F}
+plot_chart
+```

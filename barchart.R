@@ -27,3 +27,7 @@ p <- ggplot(data = df, aes(x = name, y = loan)) +
     title = "National Vs WA Student Loan Subsidized Disburements"
   )
 
+plot_chart <- ggplot(database, aes(x = School.Type, y = Subsidized.Recipients)) +
+  geom_boxplot(outlier.shape = NA) +
+  ylim(c(0, 2000))
+plot_chart
