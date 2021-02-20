@@ -10,7 +10,9 @@ Our domain of interest is student loans. Specifically, we are looking at a datas
 
 ```{r setup, echo = F, message = F}
 library(knitr)
+library(ggplot2)
 source("summary.R")
+source("barchart.R")
 source("scatter_plot.R")
 source("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/tablecreator.R?token=ASLHHB2B6DUYXRKJYEAHNILAHGD6K")
 library(tidyverse)
@@ -27,10 +29,20 @@ kable(tabledata, col.names = gsub("[.]", " ", names(tabledata)))
 ```
 
 ## Chart 1
+We looked at all the student loans that subsidised in both the national level and WA, take the average loan per institution, and compare them in the barchart. What we find was that the average amount of loan per instituation of WA is almost half of the national one. This could be the result of Washinton has lower tuitio fee and higher payroll.
 
+```{r, echo = F, message = F, warning = F}
+p
+```
 ## Chart 2 - Recipients VS Amount Scatterplot
 What we were interested in seeing with this chart was whether or not there was a relationship between how much money a college receives in loans, and how many recipients they have. What we found was that there is a strong linear relationship between the two variables. This is what we expected for the most part, as it makes sense that the more recipients, the more money. However, there are a few colleges that appear to deviate slightly from the norm, receiving less money for the amount of recipients than other colleges. It would be interesting to use something like plotly to create an interactive version and more closely examine these deviant cases.
 ```{r, echo = F, message = F, warning = F}
 scatter_plot
 ```
+
+
+
+
+
+
 
