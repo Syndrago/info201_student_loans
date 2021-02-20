@@ -9,8 +9,10 @@ Our domain of interest is student loans. Specifically, we are looking at a datas
 ## Summary Info
 
 ```{r setup, echo = F, message = F}
+library(knitr)
 source("summary.R")
 source("scatter_plot.R")
+source("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/tablecreator.R?token=ASLHHB2B6DUYXRKJYEAHNILAHGD6K")
 library(tidyverse)
 ```
 
@@ -18,6 +20,11 @@ In our dataset, we found that the university with the highest amount of subsidiz
 
 ## Table
 
+The table that we wanted to highlight contains a list of schools in each state that has the highest ratio of disimbursement money to originated loan money. This is significant because we might want to attend the school that disimburses a large amount of money instead of little amounts.
+
+```{r echo = F}
+kable(tabledata, col.names = gsub("[.]", " ", names(tabledata)))
+```
 
 ## Chart 1
 

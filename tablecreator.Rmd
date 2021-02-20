@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r echo = F}
+```{r echo = T}
 library(knitr)
 library(tidyverse)
 source("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/tablecreator.R?token=ASLHHB2B6DUYXRKJYEAHNILAHGD6K")
