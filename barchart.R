@@ -29,5 +29,7 @@ p <- ggplot(data = df, aes(x = name, y = loan)) +
 
 plot_chart <- ggplot(database, aes(x = School.Type, y = Subsidized.Recipients)) +
   geom_boxplot(outlier.shape = NA) +
-  ylim(c(0, 2000))
+  ylim(c(0, 2000)) +
+  labs(title = "School Type and their Loan Recipient")
 plot_chart
+
