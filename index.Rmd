@@ -36,7 +36,7 @@ p
 ```
 
 ## Chart 2 - Recipients VS Amount Scatterplot
-What we were interested in seeing with this chart was whether or not there was a relationship between how much money a college receives in loans, and how many recipients they have. What we found was that there is a strong linear relationship between the two variables. This is what we expected for the most part, as it makes sense that the more recipients, the more money. However, there are a few colleges that appear to deviate slightly from the norm, receiving less money for the amount of recipients than other colleges. It would be interesting to use something like plotly to create an interactive version and more closely examine these deviant cases.
+What we were interested in seeing with this chart was whether or not there was a relationship between how much money total a college receives in loans, and how many recipients they have. Each point is a college, the x axis is the number of recipients, and the y axis is the total dollar amount of loans given to that college. For example, the college plotted in the top right of the graph received about sixty million dollars in loans for about twenty five thousand loan recipients. What we found was that there is a strong linear relationship between the two variables. This is what we expected for the most part, as it makes sense that the more recipients, the more money. However, there are a few colleges that appear to deviate slightly from the norm, receiving less money for the amount of recipients than other colleges. It would be interesting to use something like plotly to create an interactive version and more closely examine these deviant cases.
 ```{r, echo = F, message = F, warning = F}
 scatter_plot
 ```
