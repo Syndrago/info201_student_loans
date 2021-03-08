@@ -11,11 +11,11 @@ Our domain of interest is student loans. Specifically, we are looking at a datas
 ```{r setup, echo = F, message = F}
 library(knitr)
 library(ggplot2)
+library(tidyverse)
 source("summary.R")
 source("barchart.R")
 source("scatter_plot.R")
-source("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/tablecreator.R?token=ASLHHB2B6DUYXRKJYEAHNILAHGD6K")
-library(tidyverse)
+source("tablecreator.R")
 ```
 
 In our dataset, we found that the university with the highest amount of subsidized loan recipients is `r summary_info$highest_recipient_name`. The average amount of subsidized recipients across all colleges is `r summary_info$average_recipients`. The total amount of colleges represented in the dataset is `r summary_info$num_colleges`. We also found that the average amount of money going to each college in subsidized loans is `r summary_info$average_amount` and that the highest amount given out to one college is `r summary_info$highest_amount`.
