@@ -22,7 +22,7 @@ In our dataset, we found that the university with the highest amount of subsidiz
 
 ## Table
 
-The table that we wanted to highlight contains a list of schools in each state that has the highest ratio of disimbursement money to originated loan money. This is significant because we might want to attend the school that disimburses a large amount of money instead of little amounts.
+The table that we wanted to highlight contains a list of schools in each state that has the highest ratio of disimbursement money to originated loan money. This is significant because we might want to attend the school that disimburses a large amount of money instead of little amounts. The ratio is just one way to visualize how much money is disimbursed at a time by that school. For example, a ratio of 1.00 means that it the school reimburses the funds fully at a time, but only once in, say, a year, while a ratio of 0.50 means that the school reimburses 50% of the total fund in one disimbursement, and this usually means that the school does more disimbursements in one year in smaller amounts compared to the schools with higher ratios. This might be useful to someone who has a preference in their money management. People who like to manage a large sum of money should go for schools with a higher ratio, while people who are more comfortable with "annual income" should pick schools with lower ratio values.
 
 ```{r echo = F}
 kable(tabledata, col.names = gsub("[.]", " ", names(tabledata)))
