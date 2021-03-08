@@ -29,7 +29,7 @@ kable(tabledata, col.names = gsub("[.]", " ", names(tabledata)))
 ```
 
 ## Chart 1 - National student loan average vs Wa student loan average
-We looked at all the student loans that subsidised in both the national level and WA, take the average loan per institution, and compare them in the barchart. What we find was that the average amount of loan per instituation of WA is almost half of the national one. This could be the result of Washinton has lower tuitio fee and higher payroll.
+We looked at all the student loans that are subsidized in both the national level and WA, take the average loan per institution, and compare them in the bar chart. What we find was that the average amount of loan per instituation of WA is almost half of the national one. This could be the result of Washington has lower tuition fee and higher payroll.
 
 ```{r, echo = F, message = F, warning = F}
 p
