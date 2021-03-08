@@ -1,6 +1,6 @@
 library(ggplot2)
 library(dplyr)
-database <- read.csv("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/data/dashboard_data.csv?token=ASPLDNWOLRU7NNTQEHOFDFDAHBZRE")
+database <- read.csv("data/dashboard_data.csv")
 national_ave <- mean(database$Subsidized.Dollars.of.Disbursements, na.rm = T) %>%
   round()
 
