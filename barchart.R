@@ -1,6 +1,6 @@
 library(ggplot2)
 library(dplyr)
-database <- read.csv("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/data/dashboard_data.csv?token=ASPLDNWOLRU7NNTQEHOFDFDAHBZRE")
+database <- read.csv("data/dashboard_data.csv")
 national_ave <- mean(database$Subsidized.Dollars.of.Disbursements, na.rm = T) %>%
   round()
 
@@ -27,9 +27,10 @@ p <- ggplot(data = df, aes(x = name, y = loan)) +
     title = "National Vs WA Student Loan Subsidized Disburements"
   )
 
-plot_chart <- ggplot(database, aes(x = School.Type, y = Subsidized.Recipients)) +
+major_school <- database %>% 
+  filter(School.Type == "Public" | School.Type == "Private-Nonprofit")
+
+plot_chart <- ggplot(major_school, aes(x = School.Type, y = Subsidized.Recipients)) +
   geom_boxplot(outlier.shape = NA) +
   ylim(c(0, 2000)) +
   labs(title = "School Type and their Loan Recipient")
-plot_chart
-

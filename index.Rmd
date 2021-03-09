@@ -11,25 +11,25 @@ Our domain of interest is student loans. Specifically, we are looking at a datas
 ```{r setup, echo = F, message = F}
 library(knitr)
 library(ggplot2)
+library(tidyverse)
 source("summary.R")
 source("barchart.R")
 source("scatter_plot.R")
-source("https://raw.githubusercontent.com/info201a-w21/info201_student_loans/main/tablecreator.R?token=ASLHHB2B6DUYXRKJYEAHNILAHGD6K")
-library(tidyverse)
+source("tablecreator.R")
 ```
 
 In our dataset, we found that the university with the highest amount of subsidized loan recipients is `r summary_info$highest_recipient_name`. The average amount of subsidized recipients across all colleges is `r summary_info$average_recipients`. The total amount of colleges represented in the dataset is `r summary_info$num_colleges`. We also found that the average amount of money going to each college in subsidized loans is `r summary_info$average_amount` and that the highest amount given out to one college is `r summary_info$highest_amount`.
 
 ## Table
 
-The table that we wanted to highlight contains a list of schools in each state that has the highest ratio of disimbursement money to originated loan money. This is significant because we might want to attend the school that disimburses a large amount of money instead of little amounts.
+The table that we wanted to highlight contains a list of schools in each state that has the highest ratio of disimbursement money to originated loan money. This is significant because we might want to attend the school that disimburses a large amount of money instead of little amounts. The ratio is just one way to visualize how much money is disimbursed at a time by that school. For example, a ratio of 1.00 means that it the school reimburses the funds fully at a time, but only once in, say, a year, while a ratio of 0.50 means that the school reimburses 50% of the total fund in one disimbursement, and this usually means that the school does more disimbursements in one year in smaller amounts compared to the schools with higher ratios. This might be useful to someone who has a preference in their money management. People who like to manage a large sum of money should go for schools with a higher ratio, while people who are more comfortable with "annual income" should pick schools with lower ratio values.
 
 ```{r echo = F}
 kable(tabledata, col.names = gsub("[.]", " ", names(tabledata)))
 ```
 
 ## Chart 1 - National student loan average vs Wa student loan average
-We looked at all the student loans that subsidised in both the national level and WA, take the average loan per institution, and compare them in the barchart. What we find was that the average amount of loan per instituation of WA is almost half of the national one. This could be the result of Washinton has lower tuitio fee and higher payroll.
+We looked at all the student loans that are subsidized in both the national level and WA, take the average loan per institution, and compare them in the bar chart. What we find was that the average amount of loan per instituation of WA is almost half of the national one. This could be the result of Washington has lower tuition fee and higher payroll.
 
 ```{r, echo = F, message = F, warning = F}
 p
