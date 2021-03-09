@@ -1,25 +1,62 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
 
 library(shiny)
+library(tidyverse)
+library(scales)
+library(plotly)
+
+
+loan_data <- read.csv(file = 'data/dashboard_data.csv')
+
+
+# Heatmap -----------------------------------------------------------------
+
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
-    output$distPlot <- renderPlot({
+    output$map <- renderPlot({
+        
+        selected <- loan_data %>% 
+            select(3:9) 
+            
+        filt_data <- selected %>% 
+            group_by(State) %>%
+            summarise(state_total = sum(Subsidized.Dollars.of.Loans.Originated, na.rm = T))
+        
+        state_shapes <- map_data("state") %>% # Get shape map of states
+            rename(State = region)
+        
+        state_shapes$State <- state.abb[match(state_shapes$State, tolower(state.name))]
+        
+        joined <- state_shapes %>% # Join state shapes and stats
+            left_join(filt_data, by = "State")
+        
+        heatmap <- ggplot(joined) + # Create chart
+            geom_polygon(
+                mapping = aes(x = long, y = lat, group = group, fill = state_total),
+                color = "white",
+                size = .1
+            ) +
+            coord_map() +
+            scale_fill_continuous(low = "Green4", high = "Red", labels = comma) +
+            labs(fill = "Test") +
+            theme(
+                axis.line = element_blank(),
+                axis.text = element_blank(),
+                axis.ticks = element_blank(),
+                axis.title = element_blank(),
+                plot.background = element_blank(),
+                panel.grid.major = element_blank(),
+                panel.grid.minor = element_blank(),
+                panel.border = element_blank()
+            ) +
+            labs(title = "Heatmap of test") +
+            theme(plot.title = element_text(hjust = 0.5))
+        
+        return(heatmap)
 
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
+        
 
     })
 
