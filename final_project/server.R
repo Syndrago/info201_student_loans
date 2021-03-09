@@ -5,7 +5,7 @@ library(scales)
 library(plotly)
 
 
-loan_data <- read.csv(file = 'data/dashboard_data.csv')
+loan_data <- read.csv(file = 'dashboard_data.csv')
 
 
 # Heatmap -----------------------------------------------------------------
@@ -17,11 +17,16 @@ shinyServer(function(input, output) {
     output$map <- renderPlot({
         
         selected <- loan_data %>% 
-            select(3:9) 
+            select(3:7,
+                   Unsubsidized.Undergrad.Recipients,
+                   Unsubsidized.Graduate.Recipients,
+                   Parent.Plus.Recipients) 
             
+        assign("input", input$var)
+        
         filt_data <- selected %>% 
             group_by(State) %>%
-            summarise(state_total = sum(Subsidized.Dollars.of.Loans.Originated, na.rm = T))
+            summarise(state_total = sum(get(input), na.rm = T))
         
         state_shapes <- map_data("state") %>% # Get shape map of states
             rename(State = region)

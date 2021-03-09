@@ -1,8 +1,24 @@
 
 library(shiny)
 
-source("final_project/server.R")
+source("server.R")
 
+
+# Chart Page Layout -------------------------------------------------------
+
+chart_layout <- sidebarLayout(
+    sidebarPanel(
+        selectInput(
+            inputId = "var",
+            label = "Variable of Interest",
+            choices = colnames(selected %>%
+                select(5:8)) 
+        )
+    ),
+    mainPanel(
+        plotOutput("map")
+    )
+)
 # Pages -------------------------------------------------------------------
 
 main_page <- tabPanel(
@@ -31,20 +47,7 @@ summary <- tabPanel(
 )
 
 
-# Chart Page Layout -------------------------------------------------------
 
-chart_layout <- sidebarLayout(
-    sidebarPanel(
-        selectInput(
-            inputId = "var",
-            label = "Variable of Interest",
-            choices = colnames(selected, 5:8)
-        )
-    ),
-    mainPanel(
-        p("test")
-    )
-)
 
 shinyUI(navbarPage(
     "Final Project",
