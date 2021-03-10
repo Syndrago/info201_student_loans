@@ -9,7 +9,17 @@ loan_data <- read.csv(file = 'dashboard_data.csv')
 
 
 # Heatmap -----------------------------------------------------------------
+popdata <- read.csv(file = '2020.csv')
 
+filt <- popdata %>% 
+    select(NAME, POPESTIMATE2020)
+
+filt <- filt[6:56,]
+
+filt$NAME <- state.abb[match(tolower(filt$NAME), tolower(state.name))]
+
+filt <- filt %>% 
+    rename(State = NAME, Population = POPESTIMATE2020)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -22,11 +32,14 @@ shinyServer(function(input, output) {
                    Unsubsidized.Graduate.Recipients,
                    Parent.Plus.Recipients) 
             
-        assign("input", input$var)
+        assign("input", input$var) # get(input)
         
         filt_data <- selected %>% 
             group_by(State) %>%
-            summarise(state_total = sum(get(input), na.rm = T))
+            summarise(state_total = sum(get(input), na.rm = T)) %>% 
+            left_join(filt, by = "State") %>% 
+            na.omit() %>% 
+            mutate(percent_of_pop = round(state_total / Population, 4) * 100)
         
         state_shapes <- map_data("state") %>% # Get shape map of states
             rename(State = region)
@@ -38,7 +51,7 @@ shinyServer(function(input, output) {
         
         heatmap <- ggplot(joined) + # Create chart
             geom_polygon(
-                mapping = aes(x = long, y = lat, group = group, fill = state_total),
+                mapping = aes(x = long, y = lat, group = group, fill = percent_of_pop),
                 color = "white",
                 size = .1
             ) +
