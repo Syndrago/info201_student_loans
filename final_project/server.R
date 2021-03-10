@@ -32,11 +32,13 @@ shinyServer(function(input, output) {
                    Unsubsidized.Graduate.Recipients,
                    Parent.Plus.Recipients) 
             
-        assign("input", input$var) # get(input)
+        assign("drop", input$var) # get(input)
+        
+
         
         filt_data <- selected %>% 
             group_by(State) %>%
-            summarise(state_total = sum(get(input), na.rm = T)) %>% 
+            summarise(state_total = sum(get(drop), na.rm = T)) %>% 
             left_join(filt, by = "State") %>% 
             na.omit() %>% 
             mutate(percent_of_pop = round(state_total / Population, 4) * 100)
@@ -49,9 +51,16 @@ shinyServer(function(input, output) {
         joined <- state_shapes %>% # Join state shapes and stats
             left_join(filt_data, by = "State")
         
+        
+        if (input$bchoice == "Total") {
+            choice <- "state_total"
+        } else {
+            choice <- "percent_of_pop"
+        }
+        
         heatmap <- ggplot(joined) + # Create chart
             geom_polygon(
-                mapping = aes(x = long, y = lat, group = group, fill = percent_of_pop),
+                mapping = aes(x = long, y = lat, group = group, fill = get(choice)),
                 color = "white",
                 size = .1
             ) +

@@ -13,7 +13,14 @@ chart_layout <- sidebarLayout(
             label = "Variable of Interest",
             choices = colnames(selected %>%
                 select(5:8)) 
+        ),
+        
+        radioButtons(
+            inputId = "bchoice",
+            label = "Choice",
+            choices = c("Total", "Percent of Population")
         )
+        
     ),
     mainPanel(
         plotOutput("map")
