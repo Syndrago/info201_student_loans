@@ -34,8 +34,6 @@ shinyServer(function(input, output) {
             
         assign("drop", input$var) # get(input)
         
-
-        
         filt_data <- selected %>% 
             group_by(State) %>%
             summarise(state_total = sum(get(drop), na.rm = T)) %>% 
@@ -50,7 +48,6 @@ shinyServer(function(input, output) {
         
         joined <- state_shapes %>% # Join state shapes and stats
             left_join(filt_data, by = "State")
-        
         
         if (input$bchoice == "Total") {
             choice <- "state_total"
@@ -77,13 +74,10 @@ shinyServer(function(input, output) {
                 panel.grid.minor = element_blank(),
                 panel.border = element_blank()
             ) +
-            labs(title = "Heatmap of test") +
+            labs(title = paste("Heatmap of", input$var, "as", input$bchoice)) +
             theme(plot.title = element_text(hjust = 0.5))
         
         return(heatmap)
-
-
-        
 
     })
 

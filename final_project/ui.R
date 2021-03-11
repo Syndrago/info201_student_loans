@@ -11,10 +11,13 @@ chart_layout <- sidebarLayout(
         selectInput(
             inputId = "var",
             label = "Variable of Interest",
-            choices = colnames(selected %>%
-                select(5:8)) 
+            choices = list(
+                "Subsidized Recipients" = "Subsidized.Recipients",
+                "Unsubsidized Graduate Recipients" = "Unsubsidized.Graduate.Recipients",
+                "Unsubsidized.Undergrad.Recipients" = "Unsubsidized.Undergrad.Recipients",
+                "Parent Recipients" = "Parent.Plus.Recipients"
+            )
         ),
-        
         radioButtons(
             inputId = "bchoice",
             label = "Choice",
@@ -26,11 +29,22 @@ chart_layout <- sidebarLayout(
         plotOutput("map")
     )
 )
+
 # Pages -------------------------------------------------------------------
 
 main_page <- tabPanel(
     "Main Page",
     h1("Fill in later"),
+    HTML(
+        "<style>
+            body {
+                background-image: url('bg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>"
+    )
 )
 
 chart_one <- tabPanel(
@@ -55,9 +69,10 @@ summary <- tabPanel(
 
 
 
+# Main UI -----------------------------------------------------------------
 
 shinyUI(navbarPage(
-    "Final Project",
+    "Student Loans",
     main_page,
     chart_one,
     chart_two,
