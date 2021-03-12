@@ -34,16 +34,14 @@ chart_layout <- sidebarLayout(
 
 main_page <- tabPanel(
     "Main Page",
+    includeCSS("css_file.css"),
     h1("Fill in later"),
-    HTML(
-        "<style>
-            body {
-                background-image: url('bg.jpg');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-            }
-        </style>"
+    tags$p(
+        "A paragraph is a self-contained unit
+        of discourse in writing dealing with a particular point or idea.
+        A paragraph consists of one or more sentences. Though not required by
+        the syntax of any language, paragraphs are usually an expected part of
+        formal writing, used to organize longer prose."
     )
 )
 
