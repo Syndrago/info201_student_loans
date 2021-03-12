@@ -1,4 +1,4 @@
-p {
+.intro {
     margin: auto;
   width: 50%;
   background-color: white;
@@ -9,8 +9,16 @@ p {
 }
 
 body {
-                background-image: url('bg.jpg');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-            }
+      background-image: url('bg.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+  
+.shiny-plot-output {
+  box-shadow: 7px 7px 5px grey;
+}
+.well {
+  box-shadow: 7px 7px 5px grey;
+  border-radius: 5px;
+}
