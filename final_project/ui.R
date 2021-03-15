@@ -62,7 +62,7 @@ chart2_layout <- sidebarLayout(
         )
     ),
     mainPanel(
-        tableOutput("dollartable")
+        dataTableOutput("dollartable")
     )
 )
 
