@@ -6,6 +6,15 @@
   text-align: center;
   border-radius: 5px;
   box-shadow: 7px 7px 5px grey;
+  font-family: "Times New Roman", Times, sans-serif;
+}
+
+.para {
+  font-size: 20px;
+}
+
+.by {
+  font-style: italic;
 }
 
 body {

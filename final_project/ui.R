@@ -33,17 +33,38 @@ chart_layout <- sidebarLayout(
 # Pages -------------------------------------------------------------------
 
 main_page <- tabPanel(
-    "Main Page",
+    "Introduction",
     includeCSS("css_file.css"),
     tags$div(
         class = "intro",
-        h1("Fill in later"),
-        tags$p(
-            "A paragraph is a self-contained unit
-        of discourse in writing dealing with a particular point or idea.
-        A paragraph consists of one or more sentences. Though not required by
-        the syntax of any language, paragraphs are usually an expected part of
-        formal writing, used to organize longer prose."
+        h1("An Examination of Federal Student Loans"),
+        h4(class = "by","By Luke, Ray, and Synclair"),
+        tags$div(
+            tags$p(class = "para","For our project, we are interested in looking at student loans,
+            and asking
+            several questions about them. We chose this topic because we feel
+            it is
+            not only relevant to ourselves, but to many students
+            (and student's families)
+            throughout the country. It's also topical, as there has been some
+            talk of student loan forgiveness under the new Biden administration."),
+            
+            tags$p(class = "para","The data we our working with is from the
+            government about the Title IV program, which concerns federal
+            student aid.
+            We are focusing on federal student loans, as not much data is
+            available about
+            private loans, although this data would no doubt be very
+            informative. Specifically we
+            are looking at data from the end of 2020 through the beginning of
+            2021, so as to
+            get insights on the most recent data. The data itself covers
+            multiple
+            loan types
+            from every college in he country where students have recieved
+            government issued
+            student loans. We hope to ucover some valuable insights
+            through the examination of this data.")
         )
     )
     
