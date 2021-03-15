@@ -57,8 +57,8 @@ chart2_layout <- sidebarLayout(
             inputId = "dollars",
             label = "Choose dollar range",
             min = 0,
-            max = 10,
-            value = c(2, 5)
+            max = max(loan_data$Unsubsidized.Graduate.Dollars.of.Loans.Originated, na.rm = T),
+            value = c(5000,20000000)
         )
     ),
     mainPanel(
