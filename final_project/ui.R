@@ -30,6 +30,21 @@ chart_layout <- sidebarLayout(
     )
 )
 
+chart2_layout <- sidebarLayout(
+    sidebarPanel(
+        sliderInput(
+            inputId = "dollars",
+            label = "Choose dollar range",
+            min = 0,
+            max = 10,
+            value = c(2, 5)
+        )
+    ),
+    mainPanel(
+        h1("hello")
+    )
+)
+
 # Pages -------------------------------------------------------------------
 
 main_page <- tabPanel(
@@ -77,7 +92,7 @@ chart_one <- tabPanel(
 
 chart_two <- tabPanel(
     "Chart 2",
-    h1("Fill in later"),
+    chart2_layout,
 )
 
 chart_three <- tabPanel(
