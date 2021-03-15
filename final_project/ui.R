@@ -14,7 +14,7 @@ chart_layout <- sidebarLayout(
                 choices = list(
                     "Subsidized Recipients" = "Subsidized.Recipients",
                     "Unsubsidized Graduate Recipients" = "Unsubsidized.Graduate.Recipients",
-                    "Unsubsidized.Undergrad.Recipients" = "Unsubsidized.Undergrad.Recipients",
+                    "Unsubsidized Undergrad Recipients" = "Unsubsidized.Undergrad.Recipients",
                     "Parent Recipients" = "Parent.Plus.Recipients"
                 )
             ),
@@ -22,6 +22,17 @@ chart_layout <- sidebarLayout(
                 inputId = "bchoice",
                 label = "Choice",
                 choices = c("Total", "Percent of Population")
+            ),
+            tags$div(
+                h4("Eplanation:"),
+                tags$p("Subsidized Recipients are those students who have
+                       recieved loans with interest payed for by the government."),
+                tags$p("Unsubsidized Graduate Recipients are those graduate students who recieved
+                       loans WITHOUT interest payed for bythe government."),
+                tags$p("Unsubsidized Undergrad Recipients are those undergraduate students
+                       who have recieved loans WITHOUT interest payed for by the government."),
+                tags$p("Parent (plus) Recipients are those parents who have recieved student
+                       loans on behalf of thier children.")
             )
             
     ),

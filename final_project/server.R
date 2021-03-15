@@ -51,8 +51,10 @@ shinyServer(function(input, output) {
         
         if (input$bchoice == "Total") {
             choice <- "state_total"
+            lab <- "Total Count"
         } else {
             choice <- "percent_of_pop"
+            lab <- "Rate"
         }
         
         heatmap <- ggplot(joined) + # Create chart
@@ -63,7 +65,7 @@ shinyServer(function(input, output) {
             ) +
             coord_map() +
             scale_fill_continuous(low = "Green4", high = "Red", labels = comma) +
-            labs(fill = "Test") +
+            labs(fill = lab) +
             theme(
                 axis.line = element_blank(),
                 axis.text = element_blank(),
@@ -72,10 +74,13 @@ shinyServer(function(input, output) {
                 plot.background = element_blank(),
                 panel.grid.major = element_blank(),
                 panel.grid.minor = element_blank(),
-                panel.border = element_blank()
+                panel.border = element_blank(),
+                panel.background = element_blank()
             ) +
+            theme(legend.key.size = unit(1.5, 'cm'), legend.text = element_text(size=15),
+                  legend.title = element_text(size=25)) +
             labs(title = paste("Heatmap of", input$var, "as", input$bchoice)) +
-            theme(plot.title = element_text(hjust = 0.5))
+            theme(plot.title = element_text(hjust = 0.5, size = 25, family="TT Times New Roman"))
         
         return(heatmap)
 
