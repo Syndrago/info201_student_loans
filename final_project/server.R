@@ -98,6 +98,7 @@ shinyServer(function(input, output) {
             filter(between(get(dtype),
                            input$dollars[1],input$dollars[2])) %>%
             arrange(School)
+        colnames(loantabled) <- c("School", "State", gsub("[.]", " ", dtype))
         loantabled
     })
 
