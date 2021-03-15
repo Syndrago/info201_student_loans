@@ -43,6 +43,16 @@ chart_layout <- sidebarLayout(
 
 chart2_layout <- sidebarLayout(
     sidebarPanel(
+        selectInput(
+            inputId = "category",
+            label = "Student Loan Type",
+            choices = list(
+                "Subsidized" = "subsidized.Dollars.of.Loans.Originated",
+                "Unsubsidized Undergraduate" = "Unsubsidized.Undergrad.Dollars.of.Loans.Originated",
+                "Unsubsidized Graduate" = "Unsubsidized.Graduate.Dollars.of.Loans.Originated",
+                "Parent Plus" = "Parent.Plus.Dollars.of.Loans.Originated",
+                "Graduate Plus" = "Grad.Plus.Dollars.of.Loans.Originated")
+        ),
         sliderInput(
             inputId = "dollars",
             label = "Choose dollar range",
