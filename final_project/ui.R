@@ -47,7 +47,7 @@ chart2_layout <- sidebarLayout(
             inputId = "category",
             label = "Student Loan Type",
             choices = list(
-                "Subsidized" = "subsidized.Dollars.of.Loans.Originated",
+                "Subsidized" = "Subsidized.Dollars.of.Loans.Originated",
                 "Unsubsidized Undergraduate" = "Unsubsidized.Undergrad.Dollars.of.Loans.Originated",
                 "Unsubsidized Graduate" = "Unsubsidized.Graduate.Dollars.of.Loans.Originated",
                 "Parent Plus" = "Parent.Plus.Dollars.of.Loans.Originated",
@@ -58,11 +58,11 @@ chart2_layout <- sidebarLayout(
             label = "Choose dollar range",
             min = 0,
             max = max(loan_data$Unsubsidized.Graduate.Dollars.of.Loans.Originated, na.rm = T),
-            value = c(5000,20000000)
+            value = c(5200000,136000000)
         )
     ),
     mainPanel(
-        h1("hello")
+        tableOutput("dollartable")
     )
 )
 

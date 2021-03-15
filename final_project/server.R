@@ -3,6 +3,7 @@ library(shiny)
 library(tidyverse)
 library(scales)
 library(plotly)
+library(ggplot2)
 
 
 loan_data <- read.csv(file = 'dashboard_data.csv')
@@ -84,6 +85,17 @@ shinyServer(function(input, output) {
         
         return(heatmap)
 
+    })
+    
+    output$dollartable <- renderTable({
+        assign("dtype", input$category)
+        loantabled <-loan_data %>% 
+            filter(!is.na(get(dtype))) %>%
+            select(School, State, dtype) %>% 
+            filter(between(get(dtype),
+                           input$dollars[1],input$dollars[2])) %>%
+            arrange(School)
+        loantabled
     })
 
 })
