@@ -14,7 +14,7 @@ chart_layout <- sidebarLayout(
                 choices = list(
                     "Subsidized Recipients" = "Subsidized.Recipients",
                     "Unsubsidized Graduate Recipients" = "Unsubsidized.Graduate.Recipients",
-                    "Unsubsidized.Undergrad.Recipients" = "Unsubsidized.Undergrad.Recipients",
+                    "Unsubsidized Undergrad Recipients" = "Unsubsidized.Undergrad.Recipients",
                     "Parent Recipients" = "Parent.Plus.Recipients"
                 )
             ),
