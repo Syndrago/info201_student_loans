@@ -13,8 +13,10 @@ chart_layout <- sidebarLayout(
       label = "Variable of Interest",
       choices = list(
         "Subsidized Recipients" = "Subsidized.Recipients",
-        "Unsubsidized Graduate Recipients" = "Unsubsidized.Graduate.Recipients",
-        "Unsubsidized Undergrad Recipients" = "Unsubsidized.Undergrad.Recipients",
+        "Unsubsidized Graduate Recipients" =
+            "Unsubsidized.Graduate.Recipients",
+        "Unsubsidized Undergrad Recipients" =
+            "Unsubsidized.Undergrad.Recipients",
         "Parent Recipients" = "Parent.Plus.Recipients"
       )
     ),
@@ -26,12 +28,18 @@ chart_layout <- sidebarLayout(
     tags$div(
       h4("Explanation:"),
       tags$p("Subsidized Recipients are those students who have
-                       recieved loans with interest payed for by the government."),
-      tags$p("Unsubsidized Graduate Recipients are those graduate students who recieved
-                       loans WITHOUT interest payed for bythe government."),
-      tags$p("Unsubsidized Undergrad Recipients are those undergraduate students
-                       who have recieved loans WITHOUT interest payed for by the government."),
-      tags$p("Parent (plus) Recipients are those parents who have recieved student
+                       recieved loans with interest
+             payed for by the government."),
+      tags$p("Unsubsidized Graduate Recipients are
+      those graduate students who recieved
+                       loans WITHOUT interest payed
+             for bythe government."),
+      tags$p("Unsubsidized Undergrad Recipients are
+      those undergraduate students
+                       who have recieved loans
+             WITHOUT interest payed for by the government."),
+      tags$p("Parent (plus) Recipients are those
+      parents who have recieved student
                        loans on behalf of thier children.")
     )
   ),
@@ -50,8 +58,10 @@ chart2_layout <- sidebarLayout(
       label = "Student Loan Type",
       choices = list(
         "Subsidized" = "Subsidized.Dollars.of.Loans.Originated",
-        "Unsubsidized Undergraduate" = "Unsubsidized.Undergrad.Dollars.of.Loans.Originated",
-        "Unsubsidized Graduate" = "Unsubsidized.Graduate.Dollars.of.Loans.Originated",
+        "Unsubsidized Undergraduate" =
+            "Unsubsidized.Undergrad.Dollars.of.Loans.Originated",
+        "Unsubsidized Graduate" =
+            "Unsubsidized.Graduate.Dollars.of.Loans.Originated",
         "Parent Plus" = "Parent.Plus.Dollars.of.Loans.Originated",
         "Graduate Plus" = "Grad.Plus.Dollars.of.Loans.Originated"
       )
@@ -104,14 +114,16 @@ main_page <- tabPanel(
     h1("An Examination of Federal Student Loans"),
     h4(class = "by", "By Luke, Ray, and Synclair"),
     tags$div(
-      tags$p(class = "para", "For our project, we are interested in looking at student loans,
+      tags$p(class = "para", "For our project,
+      we are interested in looking at student loans,
             and asking
             several questions about them. We chose this topic because we feel
             it is
             not only relevant to ourselves, but to many students
             (and student's families)
             throughout the country. It's also topical, as there has been some
-            talk of student loan forgiveness under the new Biden administration."),
+            talk of student loan forgiveness under the new
+             Biden administration."),
 
       tags$p(class = "para", "The data we our working with is from the
             government about the Title IV program, which concerns federal
@@ -139,7 +151,7 @@ chart_one <- tabPanel(
 )
 
 chart_two <- tabPanel(
-  "Chart 2",
+  " Loan Range",
   chart2_layout,
 )
 
@@ -182,8 +194,19 @@ summary <- tabPanel(
              to possibly establish some correlation or even causality. This
              graphic also excludes Alaska, Hawaii, and any US territories,
              which is also a shortcoming. "),
-      h3("Chart 2"),
-      tags$p("fill"),
+      h3("Loan Range"),
+      tags$p(" Often when we receive our student loans, we find ourselves
+             wondering why the amount disimbursed are not the same as the
+             initiated fees that was listed in the beginning. This is because
+             there are some fees that are deducted from the originated loan
+             amount for administrative purposes. The table helps us narrow
+             down the ranges of originated loan that we are comfortable with
+             (loan + fees). Upon utilizing the tool, we found out that Arizona
+             State University has the most loan originated for Subsidized,
+             Unsubsidized Undergraduate, and Unsubsidized Graduate. For Parent
+             Plus, the school with the most originated loan is Pennsylvania
+             State University. Lastly, New York University has the most dollar
+             originated for Graduate Plus student loan."),
       h3("Chart 3"),
       tags$p("fill"),
       h3("Conclusion"),
