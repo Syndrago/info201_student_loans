@@ -24,7 +24,7 @@ chart_layout <- sidebarLayout(
       choices = c("Total", "Percent of Population")
     ),
     tags$div(
-      h4("Eplanation:"),
+      h4("Explanation:"),
       tags$p("Subsidized Recipients are those students who have
                        recieved loans with interest payed for by the government."),
       tags$p("Unsubsidized Graduate Recipients are those graduate students who recieved
@@ -39,6 +39,9 @@ chart_layout <- sidebarLayout(
     plotOutput("map")
   )
 )
+
+# chart 2 -----------------------------------------------------------------
+
 
 chart2_layout <- sidebarLayout(
   sidebarPanel(
@@ -65,6 +68,9 @@ chart2_layout <- sidebarLayout(
     dataTableOutput("dollartable")
   )
 )
+
+# chart 3 -----------------------------------------------------------------
+
 
 chart3_layout <- sidebarLayout(
   sidebarPanel(
