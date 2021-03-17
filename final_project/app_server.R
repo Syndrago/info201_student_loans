@@ -30,7 +30,7 @@ filt <- filt %>%
   rename(State = NAME, Population = POPESTIMATE2020)
 
 # Define server logic required to draw a histogram
-shinyServer(function(input, output) {
+shinyServer <- function(input, output) {
   output$map <- renderPlot({
     selected <- loan_data %>%
       select(
@@ -98,8 +98,7 @@ shinyServer(function(input, output) {
         "as", input$bchoice
       )) +
       theme(plot.title = element_text(
-        hjust = 0.5, size = 25,
-        family = "TT Times New Roman"
+        hjust = 0.5, size = 25
       ))
 
     return(heatmap)
@@ -142,4 +141,4 @@ shinyServer(function(input, output) {
       labs(x = "Average Loan Per Recipient", y = "School")
     bar_chart
   })
-})
+}

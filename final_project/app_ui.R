@@ -1,3 +1,4 @@
+library(shiny)
 
 # Chart Page Layout -------------------------------------------------------
 
@@ -228,11 +229,11 @@ summary <- tabPanel(
 
 # Main UI -----------------------------------------------------------------
 
-shinyUI(navbarPage(
+shinyUI <- navbarPage(
   "Student Loans",
   main_page,
   chart_one,
   chart_two,
   chart_three,
   summary
-))
+)
