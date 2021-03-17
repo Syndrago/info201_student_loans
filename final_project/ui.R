@@ -145,7 +145,18 @@ chart_three <- tabPanel(
 
 summary <- tabPanel(
   "Summary",
-  h1("Fill in later"),
+  tags$div(
+      class = "intro",
+      h1("Insights"),
+      h3("Geographic Variation"),
+      tags$p("fill"),
+      h3("Chart 2"),
+      tags$p("fill"),
+      h3("Chart 3"),
+      tags$p("fill"),
+      h3("Conclusion"),
+      tags$p("fill")
+  )
 )
 
 
