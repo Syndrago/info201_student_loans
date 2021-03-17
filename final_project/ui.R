@@ -58,7 +58,7 @@ chart2_layout <- sidebarLayout(
     ),
     sliderInput(
       inputId = "dollars",
-      label = "Choose dollar range",
+      label = "Choose Dollar Range",
       min = 0,
       max = max(loan_data$Unsubsidized.Graduate.Dollars.of.Loans.Originated, na.rm = T),
       value = c(5200000, 136000000)
