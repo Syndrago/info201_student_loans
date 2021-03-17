@@ -40,7 +40,7 @@ shinyServer(function(input, output) {
         Parent.Plus.Recipients
       )
 
-    assign("drop", input$var) #get(input)
+    assign("drop", input$var) # get(input)
 
     filt_data <- selected %>%
       group_by(State) %>%
@@ -52,8 +52,10 @@ shinyServer(function(input, output) {
     state_shapes <- map_data("state") %>% # Get shape map of states
       rename(State = region)
 
-    state_shapes$State <- state.abb[match(state_shapes$State,
-                                          tolower(state.name))]
+    state_shapes$State <- state.abb[match(
+      state_shapes$State,
+      tolower(state.name)
+    )]
 
     joined <- state_shapes %>% # Join state shapes and stats
       left_join(filt_data, by = "State")
@@ -91,10 +93,14 @@ shinyServer(function(input, output) {
         legend.text = element_text(size = 15),
         legend.title = element_text(size = 25)
       ) +
-      labs(title = paste("Heatmap of", gsub("[.]", " ", input$var),
-                         "as", input$bchoice)) +
-      theme(plot.title = element_text(hjust = 0.5, size = 25,
-                                      family = "TT Times New Roman"))
+      labs(title = paste(
+        "Heatmap of", gsub("[.]", " ", input$var),
+        "as", input$bchoice
+      )) +
+      theme(plot.title = element_text(
+        hjust = 0.5, size = 25,
+        family = "TT Times New Roman"
+      ))
 
     return(heatmap)
   })
@@ -116,8 +122,10 @@ shinyServer(function(input, output) {
   })
 
   output$title_3 <- renderText({
-    title_str <- paste0("Top ", input$x_val, " affordable schools in ",
-                        input$state)
+    title_str <- paste0(
+      "Top ", input$x_val, " affordable schools in ",
+      input$state
+    )
     title_str
   })
 
@@ -126,8 +134,10 @@ shinyServer(function(input, output) {
       filter(State == input$state) %>%
       arrange() %>%
       top_n(input$x_val * -1)
-    bar_chart <- ggplot(df, aes(y = reorder(School, average_sub * -1),
-                                x = average_sub)) +
+    bar_chart <- ggplot(df, aes(
+      y = reorder(School, average_sub * -1),
+      x = average_sub
+    )) +
       geom_bar(stat = "identity") +
       labs(x = "Average Loan Per Recipient", y = "School")
     bar_chart

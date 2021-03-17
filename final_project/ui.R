@@ -9,9 +9,9 @@ chart_layout <- sidebarLayout(
       choices = list(
         "Subsidized Recipients" = "Subsidized.Recipients",
         "Unsubsidized Graduate Recipients" =
-            "Unsubsidized.Graduate.Recipients",
+          "Unsubsidized.Graduate.Recipients",
         "Unsubsidized Undergrad Recipients" =
-            "Unsubsidized.Undergrad.Recipients",
+          "Unsubsidized.Undergrad.Recipients",
         "Parent Recipients" = "Parent.Plus.Recipients"
       )
     ),
@@ -54,9 +54,9 @@ chart2_layout <- sidebarLayout(
       choices = list(
         "Subsidized" = "Subsidized.Dollars.of.Loans.Originated",
         "Unsubsidized Undergraduate" =
-            "Unsubsidized.Undergrad.Dollars.of.Loans.Originated",
+          "Unsubsidized.Undergrad.Dollars.of.Loans.Originated",
         "Unsubsidized Graduate" =
-            "Unsubsidized.Graduate.Dollars.of.Loans.Originated",
+          "Unsubsidized.Graduate.Dollars.of.Loans.Originated",
         "Parent Plus" = "Parent.Plus.Dollars.of.Loans.Originated",
         "Graduate Plus" = "Grad.Plus.Dollars.of.Loans.Originated"
       )
@@ -85,7 +85,7 @@ chart3_layout <- sidebarLayout(
       choices = filt$State,
       selected = "WA"
     ),
-    numericInput(#how many schools users want show
+    numericInput( # how many schools users want show
       inputId = "x_val",
       label = "How many schools do you want to show?",
       value = 10,
@@ -153,18 +153,19 @@ chart_two <- tabPanel(
 chart_three <- tabPanel(
   "Affordable Schools",
   h1("Find the most affordable schools"),
-  p("*Affordable means student borrow less amount of loan when they apply for subsidezied loan.",
-    style = "font-weight: 500; color: #4d3a7d;"),
+  p("*Affordable means students borrow less amount of loan when they apply for subsidized loan.",
+    style = "font-weight: 500; color: #4d3a7d;"
+  ),
   chart3_layout,
 )
 
 summary <- tabPanel(
   "Summary",
   tags$div(
-      class = "intro",
-      h1("Insights"),
-      h3("Geographic Variation"),
-      tags$p("When looking at geographic variation I was originally looking
+    class = "intro",
+    h1("Insights"),
+    h3("Geographic Variation"),
+    tags$p("When looking at geographic variation I was originally looking
              at just the total numbers. Unsurprisingly, when measuring this
              way, the most populous states are the ones that tend to have the
              most loan recipients for every type of loan. One interesting thing
@@ -191,8 +192,8 @@ summary <- tabPanel(
              to possibly establish some correlation or even causality. This
              graphic also excludes Alaska, Hawaii, and any US territories,
              which is also a shortcoming. "),
-      h3("Loan Range"),
-      tags$p(" Often when we receive our student loans, we find ourselves
+    h3("Loan Range"),
+    tags$p(" Often when we receive our student loans, we find ourselves
              wondering why the amount disimbursed are not the same as the
              initiated fees that was listed in the beginning. This is because
              there are some fees that are deducted from the originated loan
@@ -204,14 +205,14 @@ summary <- tabPanel(
              Plus, the school with the most originated loan is Pennsylvania
              State University. Lastly, New York University has the most dollar
              originated for Graduate Plus student loan."),
-      h3("Affordable School"),
-      tags$p("This app is for people who are looking for school and might want
+    h3("Affordable School"),
+    tags$p("This app is for people who are looking for school and might want
              to apply for student loan. In WA, almost all the schools that 
              have less average loan per recipient are colleges, and the average 
              amount is around 3000 dollars. And in Vermont, there are only 12 
              public and private colleges, which I feel funny."),
-      h3("Conclusion"),
-      tags$p("At the beginning of this project, we set out to ask and answer 
+    h3("Conclusion"),
+    tags$p("At the beginning of this project, we set out to ask and answer 
              several questions. Questions such as whether there is any 
              geographic variation in loan recipients, finding schools that 
              provide loans in a certain range, and what schools get the most 
