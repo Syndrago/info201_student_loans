@@ -89,7 +89,7 @@ shinyServer(function(input, output) {
         legend.key.size = unit(1.5, "cm"), legend.text = element_text(size = 15),
         legend.title = element_text(size = 25)
       ) +
-      labs(title = paste("Heatmap of", input$var, "as", input$bchoice)) +
+      labs(title = paste("Heatmap of", gsub("[.]", " ", input$var), "as", input$bchoice)) +
       theme(plot.title = element_text(hjust = 0.5, size = 25, family = "TT Times New Roman"))
 
     return(heatmap)

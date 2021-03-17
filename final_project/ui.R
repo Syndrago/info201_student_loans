@@ -155,7 +155,33 @@ summary <- tabPanel(
       class = "intro",
       h1("Insights"),
       h3("Geographic Variation"),
-      tags$p("fill"),
+      tags$p("When looking at geographic variation I was originally looking
+             at just the total numbers. Unsurprisingly, when measuring this
+             way, the most populous states are the ones that tend to have the
+             most loan recipients for every type of loan. One interesting thing
+             here is that Texas has more undergraduate recipients, while
+             California has more graduate recipients. To get a better picture
+             of things, I switched to measuring the recipients as a percentage
+             of the total population, which reveals a few insightful patterns.
+             One interesting pattern that emerged form measuring this way is
+             that the West Coast has a lower rate in each category, compared
+             to the rest of the country. Another interesting pattern that came
+             out in the visualization is that New Hampshire is high in
+             recipients no matter the category and is the highest for
+             subsidized recipients and unsubsidized undergrad recipients.
+             For unsubsidized graduate recipients, the highest receiving
+             state is Minnesota, despite not having nearly the same rate
+             in other categories. The final thing I noticed is that when
+             you switch to parent recipients, a lot of the states that
+             appear to have higher rates are those more rural states, such
+             as Montana, Nebraska, Kansas, and Iowa. Overall, this
+             visualization revealed geographic patterns as intended. However,
+             it shows the what and not the why. It would be interesting to
+             cross reference this with other factors, such as more specific
+             population data, or go in closer and examine at the county level
+             to possibly establish some correlation or even causality. This
+             graphic also excludes Alaska, Hawaii, and any US territories,
+             which is also a shortcoming. "),
       h3("Chart 2"),
       tags$p("fill"),
       h3("Chart 3"),
