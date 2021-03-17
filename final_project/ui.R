@@ -128,7 +128,7 @@ main_page <- tabPanel(
 )
 
 chart_one <- tabPanel(
-  "Chart 1",
+  "Geographic Variation",
   chart_layout
 )
 
