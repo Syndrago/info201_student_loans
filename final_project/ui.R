@@ -1,9 +1,4 @@
 
-library(shiny)
-
-source("server.R")
-
-
 # Chart Page Layout -------------------------------------------------------
 
 chart_layout <- sidebarLayout(
@@ -139,7 +134,7 @@ main_page <- tabPanel(
             loan types
             from every college in he country where students have recieved
             government issued
-            student loans. We hope to ucover some valuable insights
+            student loans. We hope to uncover some valuable insights
             through the examination of this data.")
     )
   )
@@ -156,8 +151,10 @@ chart_two <- tabPanel(
 )
 
 chart_three <- tabPanel(
-  "Chart 3",
+  "Affordable Schools",
   h1("Find the most affordable schools"),
+  p("*Affordable means student borrow less amount of loan when they apply for subsidezied loan.",
+    style = "font-weight: 500; color: #4d3a7d;"),
   chart3_layout,
 )
 
@@ -207,10 +204,22 @@ summary <- tabPanel(
              Plus, the school with the most originated loan is Pennsylvania
              State University. Lastly, New York University has the most dollar
              originated for Graduate Plus student loan."),
-      h3("Chart 3"),
-      tags$p("fill"),
+      h3("Affordable School"),
+      tags$p("This app is for people who are looking for school and might want
+             to apply for student loan. In WA, almost all the schools that 
+             have less average loan per recipient are colleges, and the average 
+             amount is around 3000 dollars. And in Vermont, there are only 12 
+             public and private colleges, which I feel funny."),
       h3("Conclusion"),
-      tags$p("fill")
+      tags$p("At the beginning of this project, we set out to ask and answer 
+             several questions. Questions such as whether there is any 
+             geographic variation in loan recipients, finding schools that 
+             provide loans in a certain range, and what schools get the most 
+             affordable loans in each state. We originally designed this 
+             ShinyApp specifically with students who are in trouble looking 
+             for the schools with the student loans that fit their needs, 
+             and we think that we have achieved so using our relatively 
+             easy to understand visualizations.")
   )
 )
 

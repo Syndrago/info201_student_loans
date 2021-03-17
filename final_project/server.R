@@ -13,7 +13,7 @@ loan_data <- read.csv(file = "dashboard_data.csv")
 data_for_char3 <- loan_data %>%
   mutate(average_sub = Subsidized.Dollars.of.Loans.Originated
   / Subsidized.Num.of.Loans.Originated) %>%
-  filter(School.Type == "Public") %>%
+  filter(School.Type == "Public" | School.Type == "Private-Nonprofit") %>%
   select(School, State, average_sub)
 
 # Heatmap -----------------------------------------------------------------
